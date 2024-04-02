@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden !important;
+}
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(187, 207, 153);
+}
+#hangman{
+    margin: 20px;
+    border-bottom: 3px solid black;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 600px;
+}
+.letters{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(16,auto);
+    grid-gap: 20px;
+}
+.letter{
+    background-color: rgb(72, 72, 228);
+    padding: 15px 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+.letterd{
+    pointer-events: none;
+    background-color: rgb(37, 37, 94);
+    opacity: 0.6;
+}
+.letter:hover{
+    opacity: 0.8;
+    background-color: rgb(37, 37, 94);
+}
+.writing{   
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.empty{
+ margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 900;
+    border-bottom: 1px solid black;
+}
+.gameover{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    display: none;
+}
+.reset{
+    margin-bottom: 80px;
+    padding: 20px 10px;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    width: 120px;
+    cursor: pointer;
+}
+.reset:hover{
+    background-color: rgb(15, 71, 71);
+    width: 150px;
+}
+.endtext{
+  margin-top: 120px;
+    font-size: 5rem;
+    color: red;
+ text-align: center;
+}
+.endtext p:first-child{
+    color: white;
+    font-size: 4rem;
+    margin-top: 80px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.endtext p:nth-child(2){
+    color: white;
+    font-size: 2rem;
+}
